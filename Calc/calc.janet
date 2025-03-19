@@ -46,15 +46,17 @@
 
 (while true
     (print "\nEnter first number: ")
-    (def first-num (scan-number (string/trim (file/read stdin :line))))
+    (var first-num (scan-number (string/trim (file/read stdin :line))))
     (print "You entered: " first-num)
+    (if (= first-num "q")
+        os/exit)
 
     (print "Enter operator: ")
-    (def user-operator (string/trim (file/read stdin :line)))
+    (var user-operator (string/trim (file/read stdin :line)))
     (print "You entered: " user-operator)
 
     (print "Enter second number: ")
-    (def second-num (scan-number(string/trim (file/read stdin :line))))
+    (var second-num (scan-number(string/trim (file/read stdin :line))))
     (print "You entered: " second-num)
 
 
